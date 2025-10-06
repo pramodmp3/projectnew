@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Page Layout</title>
+    <link rel="stylesheet" href="./finance.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="monitor-frame">
+      <div class="desktop-content">
+        <section class="hero-section">
+          <img
+            src="./assets/tech.png"
+            alt="Legal service banner background image (e.g., handshake, buildings)"
+            class="hero-image"
+          />
+          <div class="hero-overlay"></div>
+        </section>
+
+        <main class="main-content">
+          <section class="intro-section">
+            <h2>
+              EXPERT LEGAL GUIDANCE FOR THE <br />
+              FINANCIAL WORLD
+            </h2>
+            <p>
+              Our team provides comprehensive legal guidance across all finance,
+              and investment law. We represent institutions and individuals in
+              complex regulatory transactions, and disputes.
+            </p>
+          </section>
+
+          <section class="areas-of-focus">
+            <h3>OUR AREAS OF FOCUS</h3>
+            <div class="card-container">
+              <div class="service-card">
+                <img
+                  src="./assets/about1.jpg"
+                  alt="Icon for Banking & Regulatory"
+                  class="card-icon"
+                />
+                <h4>BANKING & REGULATORY</h4>
+                <p>Detailed description of the service area.</p>
+              </div>
+              <div class="service-card">
+                <img
+                  src="./assets/about1.jpg"
+                  alt="Icon for Mergers & Acquisitions"
+                  class="card-icon"
+                />
+                <h4>MERGERS & ACQUISITIONS</h4>
+                <p>Detailed description of the service area.</p>
+              </div>
+              <div class="service-card">
+                <img
+                  src="./assets/about1.jpg"
+                  alt="Icon for Financial Disputes"
+                  class="card-icon"
+                />
+                <h4>FINANCIAL DISPUTES & LITIGATION</h4>
+                <p>Detailed description of the service area.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="why-choose-us">
+            <h3>WHY CHOOSE US?</h3>
+            <div class="choose-us-content">
+              <div class="bullets">
+                <p>
+                  <img src="./assets/about1.jpg" alt="Checkmark icon" />
+                  Experienced Legal Team
+                </p>
+                <p>
+                  <img src="./assets/about1.jpg" alt="Checkmark icon" />
+                  Client-Centric Approach
+                </p>
+                <p>
+                  <img src="./assets/about1.jpg" alt="Checkmark icon" />
+                  Innovative Solutions
+                </p>
+              </div>
+              <div class="team-photo">
+                <img
+                  src="./assets/leagalteam.png"
+                  alt="Photo of the legal team"
+                />
+              </div>
+            </div>
+          </section>
+          <section class="faq-section">
+            <h3>FREQUENTLY ASKED QUESTIONS</h3>
+            <div class="faq-container">
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is your fee structure for [Service Name, e.g., Finance
+                  Law]?
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    We offer competitive rates including hourly billing, fixed
+                    fees for certain matters (like contract review), and
+                    retainer options. Our initial consultation will provide a
+                    detailed, transparent breakdown specific to your case.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  How long does the legal process typically take?
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    The timeline varies significantly based on the complexity of
+                    your issue (e.g., litigation vs. transactional work). We
+                    prioritize efficiency and will provide you with a realistic
+                    timeline estimate after our initial review.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  Do you handle cases outside of [Local Area]?
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    While our primary office is based locally, our legal team is
+                    licensed to practice across [State/Region Name]. For
+                    national or international matters, we work with a trusted
+                    network of specialized counsel.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+  <script src="navbar.js"></script>
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+  <script src="faq.js"></script>
+</html>

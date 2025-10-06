@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers</title>
+    <link rel="stylesheet" href="./career.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="career">
+      <div class="join"><img src="./assets/car1.jpeg" alt="" /></div>
+      <div class="opportunity">
+        <div class="theory">
+          <h3>
+            It is not just a career. It’s an opportunity that lets you create
+            possibilities. An opportunity to do more and be more.
+          </h3>
+          <p>
+            At Stackly, it's more than just a career—it's an opportunity to
+            shape the future. Join one of India's fastest-growing consumer
+            brands and push your achievements to new heights. Whether you're
+            into product design, R&D, product management, marketing, sales, or
+            support, we promise to challenge and inspire you. Our culture values
+            entrepreneurship, empowerment, integrity, continuous learning, and
+            spreading positive energy. We see every challenge as an opportunity
+            and every problem as a solution waiting to be found. Come, join us,
+            and together let's create products that make a difference to the
+            world.
+          </p>
+        </div>
+        <img src="./assets/car2.png" alt="" />
+      </div>
+      <div class="apply">
+        <a href="./404.html"><button>APPLY NOW</button></a>
+      </div>
+    </div>
+  </body>
+  <script src="navbar.js"></script>
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</html>

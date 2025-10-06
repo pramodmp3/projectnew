@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero-section */
+.hero {
+  margin-top: 1px;
+  width: 100%;
+  overflow-x: auto;
+  /* allows horizontal scroll */
+  scroll-behavior: smooth;
+  /* smooth scrolling */
+  white-space: nowrap;
+  /* keeps images in one row */
+}
+
+.hero-img {
+  display: flex;
+  /* places images side by side */
+}
+
+.hero-img img {
+  width: 100vw;
+  /* each image takes full screen width */
+  height: 700px;
+  /* fixed height (adjust as needed) */
+  object-fit: cover;
+  /* crops nicely instead of stretching */
+  flex-shrink: 0;
+  /* prevents images from shrinking */
+}
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.serve-head {
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  padding: 35px;
+  background-color: black;
+  height: 100px;
+  box-shadow: 0 4px 8px aquamarine;
+}
+/* Grid container: 3 columns */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Grid item (box) */
+.container > div {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  min-height: 300px; /* 👈 Increased height to span "two rows" */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.container > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* SVG icons */
+.container svg {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+/* Link and heading */
+.container a {
+  text-decoration: none;
+  color: #333;
+}
+
+.container h3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.heading-aw {
+  text-align: center;
+  color: white;
+  margin: 30px 0;
+  padding: 35px;
+  background-color: black;
+  height: 100px;
+  box-shadow: 0 8px 8px aquamarine;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px 0;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.awards {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.awards img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.awards img:hover {
+  transform: scale(1.1);
+}
+/* =======================
+   📱 MOBILE RESPONSIVENESS
+   ======================= */
+
+@media (max-width: 1024px) {
+  .hero-img img {
+    height: 500px;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px 15px;
+  }
+
+  .container > div {
+    min-height: 250px;
+    padding: 25px 15px;
+  }
+
+  .serve-head,
+  .heading-aw {
+    font-size: 22px;
+    height: auto;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-img img {
+    height: 400px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .container > div {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 220px;
+  }
+
+  .serve-head,
+  .heading-aw {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .awards img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img img {
+    height: 300px;
+  }
+
+  .serve-head,
+  .heading-aw {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+
+  .container > div {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .container h3 {
+    font-size: 18px;
+  }
+
+  .awards {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .awards img {
+    width: 120px;
+  }
+}

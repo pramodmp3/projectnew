@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Career Container */
+.career {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Join Section */
+.join img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+/* Opportunity Section */
+.opportunity {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  background-color: rgb(191, 219, 176);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.opportunity img {
+  flex: 1 1 300px;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.theory {
+  flex: 2 1 400px;
+}
+
+.theory h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.theory p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Apply Button Section */
+.apply {
+  background-image: url("./assets/car3.jpg");
+  /*pathtoyourimage*/
+  background-repeat: no-repeat;
+  /*preventsrepeatingtheimage*/
+  background-size: cover;
+  /*makestheimagecovertheentirecontainer*/
+  background-position: center;
+  /*centerstheimage*/
+  padding: 50px;
+  /*optionalspacing*/
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.apply button {
+  padding: 15px 40px;
+  margin-top: 150px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apply button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* ------------------ Responsive Styles ------------------ */
+
+/* Tablets: 768px and below */
+@media (max-width: 768px) {
+  .opportunity {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .opportunity img,
+  .theory {
+    flex: 1 1 100%;
+  }
+
+  .theory h3 {
+    font-size: 1.5rem;
+  }
+
+  .theory p {
+    font-size: 0.95rem;
+  }
+
+  .apply button {
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile phones: 480px and below */
+@media (max-width: 480px) {
+  .career {
+    margin: 20px 10px;
+    gap: 20px;
+  }
+
+  .theory h3 {
+    font-size: 1.3rem;
+  }
+
+  .theory p {
+    font-size: 0.9rem;
+  }
+
+  .apply button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 12px 20px;
+  }
+}

@@ -1,0 +1,194 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+/* Quick Links */
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: rgb(231, 15, 51);
+}
+
+/* Address */
+.footer-address p {
+  margin-bottom: 10px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Social Icons */
+.social svg {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Newsletter Form */
+.footer form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer form label {
+  font-size: 20px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.footer form .news {
+  height: 50px;
+  width: 300px;
+  background-color: white;
+  border: 2px solid;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.footer form .footsub {
+  height: 50px;
+  width: 120px;
+  background-color: white;
+  border: 2px solid;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer form .footsub:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Footer Bottom */
+.footer2 {
+  background-color: rgba(0, 0, 0, 0.849);
+  height: 40px;
+  color: aliceblue;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* ------------------ Responsive Styles ------------------ */
+
+/* Medium devices (tablets, <=1024px) */
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    font-size: 18px;
+  }
+
+  .footer-section {
+    flex: 1 1 45%;
+    padding: 15px;
+  }
+
+  .footer form .news {
+    width: 250px;
+  }
+}
+
+/* Small tablets & large phones (<=768px) */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .footer form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer form .news,
+  .footer form .footsub {
+    width: 90%;
+  }
+
+  .social svg {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+/* Mobile phones (<=480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 10px;
+    font-size: 16px;
+  }
+
+  .footer-section {
+    padding: 10px 0;
+  }
+
+  .footer form label {
+    font-size: 16px;
+  }
+
+  .footer form .news {
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .footer form .footsub {
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .footer2 {
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+  }
+}

@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e7dfd9;
+}
+
+.section2 {
+  padding: 50px;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  /*verticallycenter*/
+  justify-content: space-between;
+  /*addspacingbetweentext&image*/
+  background-color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* text side takes half width */
+.container > .text {
+  flex: 1; /* allow it to grow */
+  padding: 20px; /* spacing */
+}
+
+/* image side takes half width */
+
+.container > .text > h1 {
+  font-size: 80px;
+  text-align: center;
+  color: #e7dfd9;
+}
+.container > .text ul li {
+  font-size: 25px;
+  text-align: center;
+  list-style: none;
+  color: #e7dfd9;
+}
+.container > .text button {
+  display: flex;
+  align-items: center;
+  background-color: purple;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 50px auto;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.container > .text button:hover {
+  background-color: blue;
+  transform: scale(0.9);
+}
+.container .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* position: absolute;
+    bottom: 5%;
+    left: 15%;  */
+  cursor: pointer;
+}
+
+.container .social > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.container .image {
+  flex: 1;
+  /*allowittogrow*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .image img {
+  max-width: 100%;
+  /*makeimageresponsive*/
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* padding: 20px; */
+    text-align: center;
+  }
+
+  .container > .text {
+    flex-grow: 0; /* optional: to avoid growing too large */
+    width: 100%;
+  }
+
+  .container > .text h1 {
+    font-size: 40px;
+  }
+
+  .container > .text p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .container > .text button {
+    margin: 30px auto;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .container .social {
+    position: static;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container .image {
+    margin-top: 30px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .container .image img {
+    max-width: 100%;
+    height: auto;
+  }
+}

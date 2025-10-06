@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./contact.css" />
+  </head>
+  <body>
+    <!-- Navbar placeholder -->
+    <div id="navbar"></div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-container">
+      <div class="form-section">
+        <h1>Contact Us</h1>
+        <form action="./404.html">
+          <input type="text" placeholder="Enter your name" required />
+          <input type="email" placeholder="Enter your email" required />
+          <input type="number" placeholder="Enter your phone number" required />
+
+          <select required>
+            <option value="">Select Advocate</option>
+            <option value="RANJAN">RANJAN</option>
+            <option value="ANJALI">ANJALI</option>
+            <option value="PRAMOD">PRAMOD</option>
+            <option value="NAVYA">NAVYA</option>
+            <option value="SOURAV">SOURAV</option>
+            <option value="FATHIMA">FATHIMA</option>
+          </select>
+
+          <select required>
+            <option value="">Select Your Query</option>
+            <option value="Energy">Energy</option>
+            <option value="Finance">Finance</option>
+            <option value="Technology">Technology</option>
+            <option value="Family">Family</option>
+            <option value="Insurance">Insurance</option>
+            <option value="HealthCare">HealthCare</option>
+            <option value="RealEstate">RealEstate</option>
+            <option value="Labour & Emp">Labour & Emp</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <textarea
+            placeholder="Enter your message here"
+            class="msg"
+            required
+          ></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <!-- Google Map Section -->
+      <div class="map-section">
+        <h2>Our Location</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019760208546!2d-122.41941508468178!3d37.77492977975902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808ad8fdd1a9%3A0x12255ea2f98799b2!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1632852168714!5m2!1sen!2sin"
+          width="100%"
+          height="350"
+          style="border: 0; border-radius: 10px"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <!-- Navbar Script -->
+    <script src="navbar.js"></script>
+  </body>
+</html>

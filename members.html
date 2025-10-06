@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team</title>
+    <link rel="stylesheet" href="./members.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="heading"><h1 class="head">MEET OUR TEAM</h1></div>
+    <div class="container">
+      <div class="img img1">
+        <a href="./mem1.html">
+          <img src="./assets/m1.jpg" alt="" />
+          <h4>Ranjan</h4>
+          <p>Senior Associate</p>
+        </a>
+      </div>
+      <div class="img img2">
+        <a href="./mem2.html">
+          <img src="./assets/m2.jpg" alt="" />
+          <h4>Anjali</h4>
+          <p>Junior Associate</p>
+        </a>
+      </div>
+      <div class="img img3">
+        <a href="./mem3.html">
+          <img src="./assets/m3.jpg" alt="" />
+          <h4>Pramod</h4>
+          <p>Senior Associate</p>
+        </a>
+      </div>
+      <div class="img img4">
+        <a href="/mem4.html">
+          <img src="./assets/m4.jpg" alt="" />
+          <h4>Navya</h4>
+          <p>Junior Associate</p>
+        </a>
+      </div>
+      <div class="img img5">
+        <a href="./mem5.html">
+          <img src="./assets/m5.jpg" alt="" />
+          <h4>Sourav</h4>
+          <p>Senior Associate</p>
+        </a>
+      </div>
+      <div class="img img6">
+        <a href="./mem6.html"
+          ><img src="./assets/m6.jpg" alt="" />
+          <h4>Fathima</h4>
+          <p>Junior Associate</p>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script src="navbar.js"></script>
+  <div id="footer"></div>
+  <script src="navbar.js"></script>
+  <script>
+    fetch("footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</html>

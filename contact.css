@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 30px;
+  padding: 20px;
+}
+
+.form-section,
+.map-section {
+  flex: 1 1 500px;
+  background: linear-gradient(black, grey);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.form-section h1,
+.map-section h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+textarea.msg {
+  height: 100px;
+  resize: none;
+}
+
+button {
+  display: block;
+  width: 60%;
+  margin: 30px auto 0 auto;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: black;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* ---------------- Responsive Styles ---------------- */
+
+/* Tablets: 768px and below */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    margin: 30px 10px;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .form-section,
+  .map-section {
+    flex: 1 1 100%;
+    padding: 20px;
+  }
+
+  button {
+    width: 80%;
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile phones: 480px and below */
+@media (max-width: 480px) {
+  .form-section h1,
+  .map-section h2 {
+    font-size: 20px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+    height: 35px;
+  }
+
+  textarea.msg {
+    height: 80px;
+  }
+
+  button {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .map-section iframe {
+    height: 250px;
+  }
+}

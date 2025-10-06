@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | STACKLY ASSOCIATES</title>
+    <link rel="stylesheet" href="./About.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div class="about-container">
+      <!-- Introduction Section -->
+      <section class="about-section">
+        <div class="about-text">
+          <h2>About STACKLY ASSOCIATES</h2>
+          <p>
+            Founded in 1997 by visionary legal expert Ranjan, STACKLY ASSOCIATES
+            has grown into one of the region’s most respected law firms. Built
+            on a foundation of integrity, excellence, and an unwavering
+            commitment to justice, we have spent over two decades delivering
+            strategic legal solutions tailored to the unique needs of
+            individuals, businesses, and institutions.
+          </p>
+          <p>
+            At STACKLY ASSOCIATES, we view the law not just as a profession—but
+            as a responsibility. Our team of dedicated attorneys combines deep
+            legal expertise, sharp analytical thinking, and a client-first
+            mindset to ensure every case is handled with precision and care.
+          </p>
+          <p>
+            From corporate law and civil litigation to family law and criminal
+            defense, we bring the same level of diligence, professionalism, and
+            dedication to achieving the best outcomes for our clients.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="./assets/about3.jpg" alt="Firm Introduction" />
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="about-section">
+        <div class="about-text">
+          <h2>Our Values</h2>
+          <p>
+            At STACKLY ASSOCIATES, our core values are rooted in
+            <strong>trust, transparency, and tenacity</strong>. We are dedicated
+            to building lasting relationships with our clients—guided by
+            unwavering ethical standards and a deep passion for justice.
+          </p>
+          <p>
+            We don’t just represent our clients—we
+            <strong>stand with them</strong>, every step of the way.
+          </p>
+          <p>
+            As the legal landscape continues to evolve, STACKLY ASSOCIATES
+            remains steadfast in our commitment to excellence. While our
+            <strong>legacy is built on results</strong>, our
+            <strong>future is driven by purpose</strong>.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="./assets/about2.jpg" alt="Firm Values" />
+        </div>
+      </section>
+
+      <!-- Mission and Vision Section -->
+      <section class="about-section">
+        <div class="about-text">
+          <h2>Our Mission & Vision</h2>
+          <p>
+            At STACKLY ASSOCIATES, our mission is to deliver exceptional legal
+            services with integrity, precision, and unwavering dedication to
+            justice. We strive to empower our clients through clear counsel,
+            strategic advocacy, and ethical representation—ensuring that every
+            voice is heard and every right is protected.
+          </p>
+          <p>
+            We envision a legal landscape where fairness prevails, and every
+            individual and business has access to trusted legal guidance.
+            STACKLY ASSOCIATES aims to be a beacon of excellence in the legal
+            profession, continuously evolving to meet the challenges of tomorrow
+            while upholding the timeless principles of law and justice.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="./assets/about3.jpg" alt="Mission and Vision" />
+        </div>
+      </section>
+    </div>
+  </body>
+  <script src="navbar.js"></script>
+  <div id="footer"></div>
+  <script>
+    fetch("footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+</html>
