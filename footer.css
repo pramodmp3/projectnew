@@ -1,0 +1,191 @@
+/* --- Custom Font & General Reset --- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root {
+  --color-dark: black; /* Dark Slate Gray for background */
+  --color-text-light: #d1d5db; /* Light gray for text */
+  --color-accent: #4ade80; /* Bright green for accents and links */
+  --color-extra-dark: black; /* Very dark for copyright bar */
+  --spacing-lg: 3rem;
+  --spacing-md: 1.5rem;
+  --spacing-sm: 1rem;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+}
+
+/* --- Main Footer Container (Responsive Grid) --- */
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-text-light);
+  padding: var(--spacing-lg) var(--spacing-md);
+  display: grid;
+  /* This creates the core responsiveness: columns will automatically fit between 200px and 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Adjustment for very small mobile screens (e.g., width < 480px) */
+@media (max-width: 480px) {
+  .footer {
+    gap: 2rem; /* Reduce gap slightly */
+    padding: var(--spacing-md) var(--spacing-sm); /* Reduce side padding */
+  }
+}
+
+/* --- Logo & Image Section --- */
+.footer > div:first-child {
+  padding-bottom: 0; /* Remove extra padding since grid gap handles spacing */
+}
+
+.footer > div:first-child img {
+  /* Image size as requested */
+  max-width: 120px;
+  height: auto;
+  filter: brightness(2);
+  margin-bottom: 0.5rem;
+}
+
+/* --- Common Section Headings --- */
+.footer-section h4,
+.footer form label {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+/* --- Quick Links (UL) --- */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s, transform 0.2s;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+  transform: translateX(3px); /* Subtle hover effect */
+}
+
+/* --- Address Section --- */
+.footer-address {
+  text-align: left;
+}
+
+.footer-address p {
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-address strong {
+  color: #ffffff;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* --- Social Icons --- */
+.social {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.social a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s;
+}
+
+.social a:hover {
+  transform: scale(1.1);
+}
+
+.social svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --- Newsletter Form --- */
+.footer form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  text-align: left;
+}
+
+.news {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  background-color: #374151;
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.news::placeholder {
+  color: #9ca3af;
+}
+
+.news:focus {
+  border-color: #10b981;
+}
+
+.footsub {
+  padding: 0.75rem 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.footsub:hover {
+  background-color: #22c55e;
+}
+
+/* --- Copyright Bar --- */
+.footer2 {
+  background-color: rgba(92, 226, 92, 0.719);
+  color: #000;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
