@@ -1,0 +1,83 @@
+/* Base styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: black;
+  padding: 40px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  width: 700px;
+  height: 400px;
+  box-sizing: border-box;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px;
+  width: 100%;
+  background-color: #ffd700;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6c200;
+}
+
+a {
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Mobile responsiveness */
+@media screen and (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  a {
+    font-size: 0.85rem;
+  }
+}
