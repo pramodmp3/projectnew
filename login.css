@@ -1,0 +1,118 @@
+/* Basic Reset and Body Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #000,
+    #fff
+  ); /* Deep blue gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333; /* Default text color for the form */
+}
+
+/* Login Container - The Card */
+.login-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Soft, deep shadow */
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.login-container:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Form Headings */
+.login-form h2 {
+  text-align: center;
+  color: #1f4068;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.login-form p {
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 30px;
+  font-size: 0.9em;
+}
+
+/* Input Group Styling */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.95em;
+}
+
+.input-group input[type="email"],
+.input-group input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #4a90e2; /* Accent color on focus */
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+  outline: none;
+}
+
+/* Login Button Styling */
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4a90e2; /* Vibrant blue accent */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.login-button:hover {
+  background-color: #357ae8; /* Darker shade on hover */
+  transform: translateY(-1px);
+}
+
+.login-button:active {
+  transform: translateY(1px); /* Push effect on click */
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.forgot-password a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+  color: #357ae8;
+  text-decoration: underline;
+}

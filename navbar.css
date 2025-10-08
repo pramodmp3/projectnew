@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+/* Make navbar always full width */
+#navbar {
+  width: 100%;
+}
+
+#navbar nav {
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  background-color: black;
+  margin: 0;
+  padding: 15px 0;
+  width: 100%; /* Ensure full width */
+}
+
+.nav-links {
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* ensures it stays above other content */
+}
+.navbar {
+  background-color: #000;
+}
+
+.navbox {
+  display: flex;
+  align-items: center;
+
+  /* vertical align */
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 150px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: black;
+}
+
+.nav-links li {
+  position: relative;
+  /* for dropdown positioning */
+}
+
+.nav-links a {
+  color: #eef6ff;
+  text-decoration: none;
+  padding: 10px 12px;
+  display: block;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: orange;
+}
+
+/* Dropdown menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  /*directlybelowtheparentli*/
+  left: 0;
+  background: #222;
+  min-width: 200px;
+  list-style: none;
+  padding: 6px 0;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.dropdown li a {
+  padding: 10px 16px;
+  color: #eef6ff;
+}
+
+.dropdown li a:hover {
+  background: orange;
+  color: #000;
+}
+
+/* Show dropdown when parent li is hovered */
+.nav-links li:hover > .dropdown {
+  display: block;
+}
+.navbar .navbox .login {
+  height: 40px;
+  width: 100px;
+  background-color: white;
+  color: green;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.navbar .navbox .login:hover {
+  background-color: green;
+  color: black;
+}
+
+/* =======================
+   📱 MOBILE RESPONSIVE NAVBAR
+   ======================= */
+
+@media (max-width: 900px) {
+  .navbox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  /* Hide links by default on mobile */
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    display: none; /* hidden by default */
+    background: black;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 15px 0;
+  }
+
+  /* Show when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  /* Hamburger button */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 901px) {
+  .menu-toggle {
+    display: none;
+  }
+}
